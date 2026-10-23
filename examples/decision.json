@@ -1,0 +1,19 @@
+{
+  "key": "demo-missing-fields-v1",
+  "project": "Demo · HITL-Inbox",
+  "run": "demo-review",
+  "kind": "decision",
+  "title": "Wie zeigen wir fehlende Angaben?",
+  "context": "Synthetischer Beispielfall zur Bedienung der Inbox. Kein aktueller CRM-Befund und kein Umsetzungsauftrag.",
+  "observed": "Ein Hinweis nennt mehrere fehlende Angaben, erklärt aber nicht, wer sie an welcher Stelle ergänzen kann.",
+  "expected": "Die zuständige Person erkennt die fehlenden Angaben und findet den richtigen Einstieg.",
+  "impact": "Ohne festgelegte Darstellung würde ein Agent die Nutzerführung selbst auswählen.",
+  "source": {"revision": "demo-v1", "reference": "Synthetisches Beispiel, keine Code-Revision"},
+  "evidence": [{"label": "Beispielbeobachtung", "reference": "examples/decision.json", "detail": "Angaben zur Akte und Angaben zum Team stehen im selben Hinweis. Diese Beobachtung ist nur eine Fixture."}],
+  "question": "Sollen die fehlenden Angaben nach Zuständigkeit gruppiert werden?",
+  "options": [
+    {"id": "A", "title": "Nach Zuständigkeit", "description": "Akte, eigene Angaben und Team erhalten getrennte Gruppen mit jeweils einem klaren Weg.", "pros": ["Ort und Verantwortung sind sofort erkennbar", "Auch auf schmalen Ansichten verständlich"], "cons": ["Benötigt eine verlässliche Zuordnung jeder fehlenden Angabe"]},
+    {"id": "B", "title": "Vollständige Checkliste", "description": "Alle Angaben stehen in einer Liste; Ort und zuständige Rolle werden je Zeile gezeigt.", "pros": ["Jede einzelne Angabe lässt sich direkt prüfen"], "cons": ["Längere Liste bei vielen fehlenden Angaben"]}
+  ],
+  "recommendation": {"optionId": "A", "reason": "Die nächste Handlung wird nach Verantwortlichkeit erklärt. Diese Empfehlung ist noch keine Entscheidung."}
+}

@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+coverage/
+*.log
+# Machine-specific verification and operator decisions stay local.
+/VERIFICATION.md
+/examples/activation-decision.json

@@ -1,0 +1,24 @@
+{
+  "name": "hitl-inbox",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "hitl": "bin/hitl.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs"
+  },
+  "description": "Local human-in-the-loop inbox for coding-agent findings and decisions",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b02thomas/hitl-inbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/b02thomas/hitl-inbox/issues"
+  }
+}
