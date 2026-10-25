@@ -11,6 +11,7 @@
 - `evidence`: 1–20 `{label, reference, detail}` objects. Path and line, exact reproduction, result, screenshot/artifact location. Explain what was and was not observed. No credentials.
 - `options`: 1–6 `{id, title, description, pros, cons}`. At least one concrete benefit and cost per option. Do not manufacture alternatives just to reach a count. IDs use letters/numbers/underscore/hyphen.
 - `recommendation`: `{optionId, reason}`; references an actual option and is never a decision.
+- Decision pages: follow [the integration guide](entscheidungsseite.md). Put the page path, page version, question ID and option-key mapping in `evidence`; do not add unsupported top-level fields.
 - `question`: one answerable human choice. Separate independent decisions into distinct entries. Submit dependent decisions after their prerequisites settle.
 
 Comments: `hitl comment <id> --file comment.json` with `{ "actor": "review-agent", "text": "Observed evidence …" }`. Comments are attributed statements, not authentication, and cannot approve.

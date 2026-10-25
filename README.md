@@ -74,6 +74,12 @@ The reusable skill is in [`skill/SKILL.md`](skill/SKILL.md), with the detailed s
 
 After installing the CLI on PATH, copy the skill directory to an unused location in your runtime's skill directory, for example `~/.codex/skills/hitl-review`. Do not overwrite an existing skill. New sessions can discover it; an existing session can read the file explicitly.
 
+### Optional decision pages
+
+If the `entscheidungsseite` skill is installed, `hitl-review` uses it for UI alternatives, several independent choices, or an explicit `/entscheidungsseite` request. It builds a local HTML comparison with evidence, recommendations and wireframes, then associates each question with its own inbox entry using stable question and option IDs.
+
+The page is a comparison aid; the human saves the binding answer in the HITL inbox. Page selections, “accept recommendations,” copied text, and comments do not change approval state. No automatic answer importer or HTML embedding is added. The companion skill is optional and is not bundled with this repository. See the [integration guide](skill/references/entscheidungsseite.md).
+
 The skill requires unresolved product, design, scope, and conflicting-requirement decisions to wait. Already-authorized, unambiguous corrections can proceed within scope unless the user requires approval for every finding. Merely submitting a record does not decide which work must block; the calling workflow owns that policy.
 
 The skill was independently written using the principles described in Matt Pocock's [writing-for-agents](https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL.md), [skill mechanics](https://github.com/mattpocock/skills/blob/main/skills/productivity/writing-for-agents/SKILL-MECHANICS.md), and [grilling](https://github.com/mattpocock/skills/blob/main/skills/productivity/grilling/SKILL.md): precise triggers, actionable steps, details on demand, and a distinction between discoverable facts and human choices.
